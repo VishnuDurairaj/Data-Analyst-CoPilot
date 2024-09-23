@@ -1,0 +1,47 @@
+version: '3.8'
+services:
+  jupyter_service:
+    build: services/
+    image: jupyter_service:latest
+    container_name: jupyter_service_container
+    volumes:
+      - .:/jupyternotebook
+      - work_dir:/work_dir
+    ports:
+      - "8888:8888"
+    networks:
+      - app_network
+
+  ai_teacher:
+    build: .
+    image: ai_teacher:latest
+    container_name: ai_teacher_container
+    volumes:
+      - .:/app
+      - work_dir:/work_dir
+    ports:
+      - "8080:8080"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - JUPYTER_URL=jupyter_service:8888
+    tty: true 
+    stdin_open: true
+    # restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888/health"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+    networks:
+      - app_network
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  work_dir:  # Declare the shared volume
