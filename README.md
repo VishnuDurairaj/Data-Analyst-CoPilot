@@ -29,19 +29,14 @@
 
 ### **How to Run the Project**
 
+#### **1.Clone the Repository:**
+
 ```bash
-git clone https://github.com/yourusername/data-analyst-copilot.git
+git clone https://github.com/VishnuDurairaj/Data-Analyst-CoPilot.git
 cd data-analyst-copilot
 ```
 
-### **1.Clone the Repository:**
-
-```bash
-git clone https://github.com/yourusername/data-analyst-copilot.git
-cd data-analyst-copilot
-```
-
-### **2.Run the Services with Docker Compose:**
+#### **2.Run the Services with Docker Compose:**
 ```bash
 docker-compose up
 ```
