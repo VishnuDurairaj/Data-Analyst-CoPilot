@@ -33,7 +33,7 @@
 
 ```bash
 git clone https://github.com/VishnuDurairaj/Data-Analyst-CoPilot.git
-cd data-analyst-copilot
+cd Data-Analyst-CoPilot
 ```
 
 #### **2.Run the Services with Docker Compose:**
