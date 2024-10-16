@@ -36,11 +36,15 @@ git clone https://github.com/VishnuDurairaj/Data-Analyst-CoPilot.git
 cd Data-Analyst-CoPilot
 ```
 
-#### **2.Run the Services with Docker Compose:**
+### **2.Add Your API keys:**
+
+Create a .env file and add your OpenAI or Anthropic key
+
+### **3.Run the Services with Docker Compose:**
 ```bash
 docker-compose up
 ```
 
 Access the Interface: Open your browser and go to http://localhost:8080 to start interacting with the AI assistant.
 
-Upload Your Data: Upload your Excel file through the interface and start a conversation with the AI assistant to analyze the data.
+**Upload Your Data:** Upload your Excel file through the interface and start a conversation with the AI assistant to analyze the data.
