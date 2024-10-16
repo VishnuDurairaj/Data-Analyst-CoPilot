@@ -42,7 +42,7 @@ Create a .env file and add your OpenAI or Anthropic key
 
 ### **3.Run the Services with Docker Compose:**
 ```bash
-docker-compose up
+docker-compose up -d
 ```
 
 Access the Interface: Open your browser and go to http://localhost:8080 to start interacting with the AI assistant.
