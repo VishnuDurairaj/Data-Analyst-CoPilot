@@ -41,3 +41,7 @@ kaleido==0.2.1
 #UI
 chainlit==1.1.402
 nest-asyncio==1.6.0
+
+# error fix: newer version of httpx is incompatible with notebook and openai packages
+# read more at: https://community.openai.com/t/error-with-openai-1-56-0-client-init-got-an-unexpected-keyword-argument-proxies/1040332
+httpx==0.27.2
